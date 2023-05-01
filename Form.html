@@ -62,6 +62,14 @@
                textError.textContent="";
             else textError.textContent="The name is incorrect";
         });
+        const mail = document.querySelector('#mail');
+        const mailError =document.querySelector('.mail-error');
+        mail.addEventListener('input', function(){
+            let nameRegex = RegExp('^[a-z]{3}[a-zA-Z.]{0,}+@+bl.co+[a-z.]{0,}$');
+            if(nameRegex.test(mail.value))
+               mailError.textContent="";
+            else mailError.textContent="The mail is not valid";
+        });
         const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
         output.textContent = salary.value;
@@ -79,5 +87,3 @@
     
 </body>
 </html>
-// email
-//^91\s[0-9]{10}$ phone number
